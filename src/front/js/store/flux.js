@@ -80,11 +80,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 						}
 					})
 					.then(data => {
-						alert(data.msg); // Mostrar mensaje de éxito
+						alert(data.msg); 
 					})
 					.catch(error => {
 						console.error(error);
-						alert(error.message); // Mostrar el error
+						alert(error.message); 
 					});
 			},
 

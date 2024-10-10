@@ -7,7 +7,7 @@ import passwordIcon from "../../img/password.png";
 import { Link } from "react-router-dom";
 
 export const SignUp = () => {
-    const { actions } = useContext(Context); // Obtén las acciones del contexto
+    const { store, actions } = useContext(Context); 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -19,7 +19,7 @@ export const SignUp = () => {
             return;
         }
 
-        // Llama a la acción signup del Flux
+      
         actions.signup(email, password);
     };
 
