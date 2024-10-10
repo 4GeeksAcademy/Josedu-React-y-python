@@ -1,19 +1,43 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext"; 
+import "../../styles/navbar.css";
+import astronautIcon from "../../img/astronaut.jpg"; 
 
 export const Navbar = () => {
-	return (
-		<nav className="navbar navbar-light bg-light">
-			<div className="container">
-				<Link to="/">
-					<span className="navbar-brand mb-0 h1">React Boilerplate</span>
-				</Link>
-				<div className="ml-auto">
-					<Link to="/demo">
-						<button className="btn btn-primary">Check the Context in action</button>
-					</Link>
-				</div>
-			</div>
-		</nav>
-	);
+    const { store, actions } = useContext(Context); 
+
+    const handleLogout = () => {
+        actions.logout(); 
+    };
+
+    return (
+        <nav className="navbar">
+            <Link to="/" className="logo">
+                <img src={astronautIcon} alt="Icono Universo" className="logo-icon" />
+            </Link>
+            <div className="login-buttons">
+               
+                {!store.auth ? (
+                    <>
+                        <div className="login-button">
+                            <Link to="/login">
+                                <button>Login</button>
+                            </Link>
+                        </div>
+                        <div className="login-button">
+                            <Link to="/signup">
+                                <button>Sign up</button>
+                            </Link>
+                        </div>
+                    </>
+                ) : (
+                    
+                    <div className="login-button">
+                        <button onClick={handleLogout}>Logout</button>
+                    </div>
+                )}
+            </div>
+        </nav>
+    );
 };

@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap'); 
+
+.navbar {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 13px 30px; 
+  background-color: #12264f; 
+  color: white; 
+  font-family: 'Roboto', sans-serif; 
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none; 
+  color: white; 
+}
+
+
+.login-buttons {
+  display: flex;               /* Habilita Flexbox para los botones */
+  align-items: center;         /* Alinea verticalmente los botones */
+}
+
+.login-button {
+  margin-left: 10px;          /* Espacio entre los botones */
+}
+
+.login-button button {
+  padding: 8px 15px; 
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #61dafb; 
+  border: none;
+  border-radius: 8px; 
+  color: black;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
+  transition: background-color 0.3s ease; 
+}
+
+.login-button button:hover {
+  background-color: #21a1f1; 
+}
+
+.logo-icon {
+  width: 50px; /* Ajusta el tamaño según tus necesidades */
+  height: 50px; /* Asegúrate de que el ancho y alto sean iguales para un círculo */
+  border-radius: 50%; /* Esto hace que la imagen sea redonda */
+  object-fit: cover; /* Asegúrate de que la imagen mantenga su proporción */
+}

@@ -1,7 +1,26 @@
-/*
-    home.css: This website contains selectors only used in home.css
-
-    All pages share the styles on index.css but you should create 
-    one more css for each page that will contain the selected used 
-    on that page only (the ones not reused in other pages).
-*/
+.jumbotron {
+    background: linear-gradient(to right, #001f4d, #000000, #343a40);
+  }
+  
+  .astronaut-icon {
+    width: 150px; /* Puedes ajustar el tamaño según lo necesites */
+    height: auto;
+    margin-bottom: 2rem; /* Separación con el título */
+  }
+  
+  h1.display-1 {
+    font-size: 6rem; /* Tamaño grande para "Astronaut" */
+    margin-bottom: 3rem; /* Separación con el texto */
+  }
+  
+  p.lead {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+  }
+  
+  .d-flex.gap-3 button {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
