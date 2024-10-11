@@ -22,6 +22,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 				getActions().changeColor(0, "green");
 			},
 
+			syncToken: () => {
+                const token = localStorage.getItem("token");
+                if (token) {
+                    setStore({ auth: true });
+                } else {
+                    setStore({ auth: false });
+                }
+            },
+
 			logout: () => {
 				localStorage.removeItem("token"); 
 				setStore({ auth: false }); 
